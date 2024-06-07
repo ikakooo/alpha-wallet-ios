@@ -19,6 +19,8 @@ extension RPCServer {
 
     var blockChainName: String {
         switch self {
+        case .mo: return "MO Mainnet"
+        case .moTestnet: return "MO Testnet"
         case .xDai: return R.string.localizable.blockchainXDAI()
         case .binance_smart_chain: return R.string.localizable.blockchainBinance()
         case .binance_smart_chain_testnet: return R.string.localizable.blockchainBinanceTest()
@@ -51,6 +53,8 @@ extension RPCServer {
 
     var iconImage: UIImage? {
         switch self {
+        case .mo: return R.image.mologo()
+        case .moTestnet: return R.image.mologo()
         case .main: return R.image.eth()
         case .xDai: return R.image.xDai()
         case .classic: return R.image.tokenEtc()
@@ -80,6 +84,8 @@ extension RPCServer {
 
     var blockChainNameColor: UIColor {
         switch self {
+        case .mo: return Configuration.Color.Semantic.blockChainMain
+        case .moTestnet: return Configuration.Color.Semantic.blockChainMain
         case .main: return Configuration.Color.Semantic.blockChainMain
         case .classic: return Configuration.Color.Semantic.blockChainClassic
         case .callisto: return Configuration.Color.Semantic.blockChainCallisto
@@ -111,6 +117,8 @@ extension RPCServer {
 
     var staticOverlayIcon: UIImage? {
         switch self {
+        case .mo: return R.image.mologo()
+        case .moTestnet: return R.image.mologo()
         case .main: return R.image.iconsNetworkEth()
         case .xDai: return R.image.iconsNetworkXdai()
         case .classic: return nil

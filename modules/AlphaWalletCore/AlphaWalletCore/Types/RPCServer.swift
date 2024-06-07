@@ -9,6 +9,8 @@ public enum RPCServer: Hashable, CaseIterable {
         case unknown
     }
 
+    case mo
+    case moTestnet
     case main
     case classic
     //As of 20210601, `.callisto` doesn't eth_blockNumber because their endpoint requires including `"params": []` in the payload even if it's empty and we don't.
@@ -43,6 +45,8 @@ public enum RPCServer: Hashable, CaseIterable {
 
     public var chainID: Int {
         switch self {
+        case .mo: return 7924
+        case .moTestnet: return 229366
         case .main: return 1
         case .classic: return 61
         case .callisto: return 104729
@@ -79,6 +83,8 @@ public enum RPCServer: Hashable, CaseIterable {
     //Cannot be `let` as the chains can change dynamically without the app being restarted (i.e. killed). The UI can be restarted though (when switching changes)
     public static var allCases: [RPCServer] {
         return [
+            .mo,
+            .moTestnet,
             .main,
             .classic,
             .xDai,
@@ -141,6 +147,27 @@ public enum RPCServer: Hashable, CaseIterable {
     }
 
     private static func convertJsonToCustomRpcs(_ json: String?) -> [CustomRPC] {
+//        let moChains = [CustomRPC(
+//            chainID: 7924,
+//            nativeCryptoTokenName: "Unnamed",
+//            chainName: "MO Mainnet",
+//            symbol: "MO",
+//            rpcEndpoint: "https://mainnet-rpc.mochain.app/",
+//            explorerEndpoint: "https://moscan.app",
+//            etherscanCompatibleType: EtherscanCompatibleType.etherscan,
+//            isTestnet: false
+//        ),
+//                        CustomRPC(
+//                            chainID: 22936,
+//                            nativeCryptoTokenName: "Unnamed",
+//                            chainName: "MO Testnet",
+//                            symbol: "MO",
+//                            rpcEndpoint: "https://testnet-rpc.mochain.app/",
+//                            explorerEndpoint: "https://motestnet.app",
+//                            etherscanCompatibleType: EtherscanCompatibleType.etherscan,
+//                            isTestnet: true)
+//        ]
+        
         if let json = json {
             let data = Data(json.utf8)
             if let servers = try? JSONDecoder().decode([CustomRPC].self, from: data) {

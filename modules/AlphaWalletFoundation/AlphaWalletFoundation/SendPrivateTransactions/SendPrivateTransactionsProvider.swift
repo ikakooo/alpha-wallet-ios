@@ -10,16 +10,16 @@ public enum SendPrivateTransactionsProvider: String, CaseIterable {
         switch self {
         case .ethermine:
             switch server.serverWithEnhancedSupport {
-            case .main:
+            case .mo, .main:
                 return URL(string: "https://rpc.ethermine.org")!
-            case .xDai, .polygon, .binance_smart_chain, .heco, .arbitrum, .klaytnCypress, .klaytnBaobabTestnet, .rinkeby, nil:
+            case .moTestnet, .xDai, .polygon, .binance_smart_chain, .heco, .arbitrum, .klaytnCypress, .klaytnBaobabTestnet, .rinkeby, nil:
                 return nil
             }
         case .eden:
             switch server.serverWithEnhancedSupport {
-            case .main:
+            case .mo, .main:
                 return URL(string: "https://api.edennetwork.io/v1/rpc")!
-            case .xDai, .polygon, .binance_smart_chain, .heco, .rinkeby, .arbitrum, .klaytnCypress, .klaytnBaobabTestnet, nil:
+            case .moTestnet, .xDai, .polygon, .binance_smart_chain, .heco, .rinkeby, .arbitrum, .klaytnCypress, .klaytnBaobabTestnet, nil:
                 return nil
             }
         }

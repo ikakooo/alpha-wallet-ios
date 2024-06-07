@@ -285,7 +285,7 @@ final class ImportMagicLinkController {
         switch server.serverWithEnhancedSupport {
         case .xDai:
             errorMessage = R.string.localizable.aClaimTokenFailedNotEnoughXDAITitle()
-        case .main, .polygon, .binance_smart_chain, .heco, .arbitrum, .klaytnCypress, .klaytnBaobabTestnet, .rinkeby, nil:
+        case .mo, .moTestnet, .main, .polygon, .binance_smart_chain, .heco, .arbitrum, .klaytnCypress, .klaytnBaobabTestnet, .rinkeby, nil:
             errorMessage = R.string.localizable.aClaimTokenFailedNotEnoughEthTitle()
         }
 

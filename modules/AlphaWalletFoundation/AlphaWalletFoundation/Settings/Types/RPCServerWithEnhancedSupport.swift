@@ -5,6 +5,8 @@ import Foundation
 //The existence of this type is to dramatically reduce the number of files (20 files as of 20220922) and changes needed to add a chain/RPCServer
 //Adding a new case here means more maintenance work when that type is updated.
 public enum RPCServerWithEnhancedSupport {
+    case mo
+    case moTestnet
     case main
     case xDai
     case polygon

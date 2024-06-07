@@ -44,7 +44,7 @@ public enum GasPriceEstimatorState {
 extension RPCServer {
     var supportsEip1559: Bool {
         switch self {
-        case .main, .polygon: return true
+        case .mo, .moTestnet, .main, .polygon: return true
         case .binance_smart_chain, .heco, .arbitrum, .klaytnCypress, .klaytnBaobabTestnet, .xDai, .custom, .callisto, .classic, .binance_smart_chain_testnet, .heco_testnet, .fantom, .fantom_testnet, .avalanche, .avalanche_testnet, .amoy_testnet, .optimistic, .cronosTestnet, .palm, .palmTestnet, .ioTeX, .ioTeXTestnet, .optimismGoerli, .arbitrumGoerli, .cronosMainnet, .okx, .sepolia: return false
         }
     }
@@ -53,7 +53,7 @@ extension RPCServer {
         switch serverWithEnhancedSupport {
         case .xDai:
             return GasPriceConfiguration.xDaiGasPrice
-        case .main, .polygon, .binance_smart_chain, .heco, .rinkeby, .arbitrum, .klaytnCypress, .klaytnBaobabTestnet, nil:
+        case .mo, .moTestnet, .main, .polygon, .binance_smart_chain, .heco, .rinkeby, .arbitrum, .klaytnCypress, .klaytnBaobabTestnet, nil:
             let minPrice: BigUInt = GasPriceConfiguration.minPrice
             let maxPrice: BigUInt = GasPriceConfiguration.maxPrice(forServer: self)
             let defaultPrice: BigUInt = GasPriceConfiguration.defaultPrice(forServer: self)

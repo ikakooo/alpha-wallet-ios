@@ -17,7 +17,7 @@ extension GasPriceConfiguration {
         switch server.serverWithEnhancedSupport {
         case .klaytnCypress, .klaytnBaobabTestnet:
             return GasPriceConfiguration.klaytnMaxPrice
-        case .main, .xDai, .polygon, .binance_smart_chain, .heco, .rinkeby, .arbitrum, .klaytnCypress, .klaytnBaobabTestnet, nil:
+        case .mo, .moTestnet, .main, .xDai, .polygon, .binance_smart_chain, .heco, .rinkeby, .arbitrum, .klaytnCypress, .klaytnBaobabTestnet, nil:
             return GasPriceConfiguration.defaultPrice
         }
     }
@@ -26,7 +26,7 @@ extension GasPriceConfiguration {
         switch server.serverWithEnhancedSupport {
         case .klaytnCypress, .klaytnBaobabTestnet:
             return GasPriceConfiguration.klaytnMaxPrice
-        case .main, .xDai, .polygon, .binance_smart_chain, .heco, .rinkeby, .arbitrum, .klaytnCypress, .klaytnBaobabTestnet, nil:
+        case .mo, .moTestnet, .main, .xDai, .polygon, .binance_smart_chain, .heco, .rinkeby, .arbitrum, .klaytnCypress, .klaytnBaobabTestnet, nil:
             return GasPriceConfiguration.maxPrice
         }
     }
@@ -35,7 +35,7 @@ extension GasPriceConfiguration {
         switch server.serverWithEnhancedSupport {
         case .xDai:
             return GasPriceBuffer.percentage(10)
-        case .main, .klaytnCypress, .klaytnBaobabTestnet, .polygon, .binance_smart_chain, .heco, .rinkeby, .arbitrum, .klaytnCypress, .klaytnBaobabTestnet, nil:
+        case .mo, .moTestnet, .main, .klaytnCypress, .klaytnBaobabTestnet, .polygon, .binance_smart_chain, .heco, .rinkeby, .arbitrum, .klaytnCypress, .klaytnBaobabTestnet, nil:
             return GasPriceBuffer.fixed(GasPriceConfiguration.oneGwei)
         }
     }

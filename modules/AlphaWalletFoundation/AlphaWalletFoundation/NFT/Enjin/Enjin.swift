@@ -58,7 +58,7 @@ public final class Enjin {
 
     static func isServerSupported(_ server: RPCServer) -> Bool {
         switch server.serverWithEnhancedSupport {
-        case .main:
+        case .mo, .moTestnet, .main:
             return true
         case .xDai, .polygon, .binance_smart_chain, .heco, .arbitrum, .klaytnCypress, .klaytnBaobabTestnet, .rinkeby, nil:
             return false

@@ -106,7 +106,7 @@ public class QuickSwap: SupportedTokenActionsProvider, SwapTokenViaUrlProvider {
         switch token.server.serverWithEnhancedSupport {
         case .polygon:
             return true
-        case .main, .xDai, .binance_smart_chain, .heco, .rinkeby, .arbitrum, .klaytnCypress, .klaytnBaobabTestnet, nil:
+        case .mo, .moTestnet, .main, .xDai, .binance_smart_chain, .heco, .rinkeby, .arbitrum, .klaytnCypress, .klaytnBaobabTestnet, nil:
             return false
         }
     }

@@ -93,7 +93,7 @@ public class Oneinch: SupportedTokenActionsProvider, SwapTokenViaUrlProvider {
         switch token.server.serverWithEnhancedSupport {
         case .main, .arbitrum:
             return asset(for: token.contractAddress) != nil
-        case .main, .xDai, .polygon, .binance_smart_chain, .heco, .rinkeby, .klaytnCypress, .klaytnBaobabTestnet, nil:
+        case .mo, .moTestnet, .main, .xDai, .polygon, .binance_smart_chain, .heco, .rinkeby, .klaytnCypress, .klaytnBaobabTestnet, nil:
             return false
         }
     }

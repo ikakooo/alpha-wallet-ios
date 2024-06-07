@@ -173,6 +173,10 @@ public class BaseCoinTickersFetcher: CoinTickersFetcher {
 
     private func fetchBatchOfTickers(for tokens: [TokenMappedToTicker], currency: Currency) async throws -> [AssignedCoinTickerId: CoinTicker] {
         let assignedCoinTickerIds: [AssignedCoinTickerId] = await tokens.asyncCompactMap { token in
+            if token.name == "MO Mainnet" || token.name == "MO Testnet" {
+                return AssignedCoinTickerId(tickerId: "mo-chain", token: token)
+            }
+            
             if let tickerId = await tickerIdsFetcher.tickerId(for: token) {
                 return AssignedCoinTickerId(tickerId: tickerId, token: token)
             } else {

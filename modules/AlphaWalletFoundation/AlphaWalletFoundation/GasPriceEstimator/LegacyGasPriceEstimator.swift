@@ -145,7 +145,7 @@ public final class LegacyGasPriceEstimator: NSObject, GasPriceEstimator {
             if (estimates.standard / BigUInt(EthereumUnit.gwei.rawValue)) > Constants.highStandardEthereumMainnetGasThresholdGwei {
                 warnings += [TransactionConfigurator.GasPriceWarning(server: server, warning: .networkCongested)]
             }
-        case .xDai, .polygon, .binance_smart_chain, .heco, .arbitrum, .klaytnCypress, .klaytnBaobabTestnet, .rinkeby, nil:
+        case .mo, .moTestnet, .xDai, .polygon, .binance_smart_chain, .heco, .arbitrum, .klaytnCypress, .klaytnBaobabTestnet, .rinkeby, nil:
             break
         }
 

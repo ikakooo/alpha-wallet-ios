@@ -448,6 +448,8 @@ extension OklinkBlockchainExplorer {
 private extension RPCServer {
     var okLinkChainShortName: String {
         switch self {
+        case .mo: return ""
+        case .moTestnet: return ""
         case .xDai: return ""
         case .binance_smart_chain: return ""
         case .binance_smart_chain_testnet: return ""

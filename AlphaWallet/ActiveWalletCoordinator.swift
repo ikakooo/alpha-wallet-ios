@@ -250,7 +250,7 @@ class ActiveWalletCoordinator: NSObject, Coordinator {
                     //TODO: make this work for other mainnets
                     case .main:
                         break
-                    case .xDai, .polygon, .binance_smart_chain, .heco, .arbitrum, .klaytnCypress, .klaytnBaobabTestnet, .rinkeby, nil:
+                    case .mo, .moTestnet, .xDai, .polygon, .binance_smart_chain, .heco, .arbitrum, .klaytnCypress, .klaytnBaobabTestnet, .rinkeby, nil:
                         return
                     }
 

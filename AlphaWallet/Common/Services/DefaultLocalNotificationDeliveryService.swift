@@ -82,7 +82,7 @@ class DefaultLocalNotificationDeliveryService: LocalNotificationDeliveryService 
         ]
 
         switch server.serverWithEnhancedSupport {
-        case .main, .xDai:
+        case .mo, .moTestnet, .main, .xDai:
             content.body = R.string.localizable.transactionsReceivedEther(amount, server.symbol)
         case .polygon, .binance_smart_chain, .heco, .arbitrum, .klaytnCypress, .klaytnBaobabTestnet, .rinkeby, nil:
             content.body = R.string.localizable.transactionsReceivedEther("\(amount) (\(server.name))", server.symbol)

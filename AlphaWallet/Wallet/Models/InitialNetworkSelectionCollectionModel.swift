@@ -9,8 +9,8 @@ import AlphaWalletFoundation
 import UIKit
 
 struct InitialNetworkSelectionCollectionModel {
-    static let defaultMainnetServers: Set<RPCServer> = [.main, .xDai, .polygon]
-    static let defaultTestnetServers: Set<RPCServer> = [.sepolia]
+    static let defaultMainnetServers: Set<RPCServer> = [.mo, .main, .xDai, .polygon]
+    static let defaultTestnetServers: Set<RPCServer> = [.moTestnet,.sepolia]
 
     // MARK: - enums
 
