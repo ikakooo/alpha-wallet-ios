@@ -46,7 +46,7 @@ public enum RPCServer: Hashable, CaseIterable {
     public var chainID: Int {
         switch self {
         case .mo: return 7924
-        case .moTestnet: return 229366
+        case .moTestnet: return 22936
         case .main: return 1
         case .classic: return 61
         case .callisto: return 104729

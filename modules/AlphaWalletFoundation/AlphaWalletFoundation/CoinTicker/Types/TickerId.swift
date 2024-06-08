@@ -65,8 +65,6 @@ extension TickerId {
 
 extension RPCServer {
     init?(coinGeckoPlatform: String) {
-        print(coinGeckoPlatform)
-        print(" ")
         switch coinGeckoPlatform {
         case "mo-chain": self = .mo
         case "ethereum": self = .main
