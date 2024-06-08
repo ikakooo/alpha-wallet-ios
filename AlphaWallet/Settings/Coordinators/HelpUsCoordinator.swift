@@ -33,11 +33,11 @@ class HelpUsCoordinator: Coordinator {
     }
 
     func rateUsOrSubscribeToNewsletter() {
-        if Features.current.isAvailable(.isPromptForEmailListSubscriptionEnabled) && appTracker.launchCountForCurrentBuild > 3 && !appTracker.hasCompletedPromptForNewsletter {
-            promptSubscribeToNewsletter()
-        } else {
+//        if Features.current.isAvailable(.isPromptForEmailListSubscriptionEnabled) && appTracker.launchCountForCurrentBuild > 3 && !appTracker.hasCompletedPromptForNewsletter {
+//            promptSubscribeToNewsletter()
+        //} else {
             rateUs()
-        }
+       // }
     }
 
     private func promptSubscribeToNewsletter() {

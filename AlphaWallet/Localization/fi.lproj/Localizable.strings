@@ -1,5 +1,5 @@
 "Advanced" = "Lisäasetukset";
-"app.device.jailbreak.description" = "Any 'jailbreak' app can access AlphaWallet's keychain data and steal your wallet! Wipe this wallet immediately and restore on a secure device.";
+"app.device.jailbreak.description" = "Any 'jailbreak' app can access Paladin's keychain data and steal your wallet! Wipe this wallet immediately and restore on a secure device.";
 "app.device.jailbreak.title" = "TÄMÄN LAITTEEN TIETOTURVA EI OLE KUNNOSSA";
 "Done" = "Valmis";
 "Cancel" = "Peru";
@@ -244,7 +244,7 @@
 "welldone.description.label.text" = "Auta meitä jakamalla tämä sovellus ystävillesi!";
 "welldone.navigation.title" = "Kiitos!";
 "welldone.share.label.text" = "Jaa";
-"welldone.viewmodel.sharing.text" = "Tunnetko jo AlfaLompakon, englanniksi AlphaWallet, ensimmäisen kännykässä toimivan kryptolompakon, jossa on sisäänrakennettu tuki älysopimuksille.";
+"welldone.viewmodel.sharing.text" = "Tunnetko jo AlfaLompakon, englanniksi Paladin, ensimmäisen kännykässä toimivan kryptolompakon, jossa on sisäänrakennettu tuki älysopimuksille.";
 "browser.home.button.title" = "Koti";
 "browser.reload.button.title" = "Lataa sivu uudelleen";
 "browser.addbookmark.button.title" = "Lisää kirjanmerkkeihinn";
@@ -362,7 +362,7 @@
 "a.help.assetDefinitionOverrides.title" = "TokenScript-tiedostojen ohitukset";
 "a.console.title" = "Tekstikonsoli";
 "a.help.contact.footer.button.title" = "Vieläkö tarvitset apua? Ota yhteyttä";
-"a.help.contact.email.subject" = "Help/Feedback for AlphaWallet";
+"a.help.contact.email.subject" = "Help/Feedback for Paladin";
 "a.help.contact.email.helpfulToDevelopers" = "Helpful information to developers:";
 "a.help.contact.email.iosVersion" = "iOS Version: %@";
 "a.help.contact.email.deviceModel" = "Device Model: %@";

@@ -22,7 +22,7 @@ struct SupportViewModelOutput {
 
 class SupportViewModel: NSObject {
     private let analytics: AnalyticsLogger
-    private let supportedRows: [SupportCase] = [.discord, .email, .twitter, .github, .faq]
+    private let supportedRows: [SupportCase] = [.telegram, .email, .twitter, .faq]
 
     init(analytics: AnalyticsLogger) {
         self.analytics = analytics
@@ -55,6 +55,8 @@ class SupportViewModel: NSObject {
 
     private func buildSupportAction(for row: SupportCase) -> SupportAction? {
         switch row {
+        case .telegram:
+            return .openUrl(.telegram)
         case .faq:
             logAccessFaq()
             return .openUrl(.faq)
@@ -129,6 +131,7 @@ extension SupportViewModel {
 
     enum SupportCase: String {
         case discord
+        case telegram
         case twitter
         case reddit
         case facebook
@@ -148,6 +151,8 @@ extension SupportViewModel {
 extension SupportViewModel.SupportCase {
     var urlProvider: URLServiceProvider? {
         switch self {
+        case .telegram:
+            return URLServiceProvider.telegram
         case .discord:
             return URLServiceProvider.discord
         case .twitter:
@@ -167,6 +172,8 @@ extension SupportViewModel.SupportCase {
 
     var title: String {
         switch self {
+        case .telegram:
+            return URLServiceProvider.telegram.title
         case .discord:
             return URLServiceProvider.discord.title
         case .twitter:
@@ -188,6 +195,8 @@ extension SupportViewModel.SupportCase {
 
     var image: UIImage? {
         switch self {
+        case .telegram:
+            return R.image.telegram()
         case .email:
             return R.image.iconsSettingsEmail()
         case .discord:
@@ -211,6 +220,8 @@ extension SupportViewModel.SupportCase {
 extension URLServiceProvider {
     var title: String {
         switch self {
+        case .telegram:
+            return "Telegram"
         case .discord:
             return R.string.localizable.urlDiscord()
         case .twitter:
@@ -228,6 +239,8 @@ extension URLServiceProvider {
 
     var image: UIImage? {
         switch self {
+        case .telegram:
+            return R.image.telegram()
         case .discord:
             return R.image.iconsSettingsDiscord()
         case .twitter:

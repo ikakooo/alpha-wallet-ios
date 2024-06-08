@@ -151,9 +151,9 @@ final class NFTCollectionInfoPageViewModel {
             return collectionDisplayHelper?.wikiUrlViewModel?.value
                 .flatMap { URL(string: $0) }
                 .flatMap { AttributeSelectionAction.openUrl($0) }
-        case .field(let vm) where collectionDisplayHelper?.instagramUsernameViewModel == vm:
-            return collectionDisplayHelper?.instagramUsernameViewModel?.value
-                .flatMap { SocialNetworkUrlProvider.resolveUrl(for: $0, urlProvider: .instagram) }
+        case .field(let vm) where collectionDisplayHelper?.telegramUrlViewModel == vm:
+            return collectionDisplayHelper?.telegramUrlViewModel?.value
+                .flatMap { SocialNetworkUrlProvider.resolveUrl(for: $0, urlProvider: .telegram) }
                 .flatMap { AttributeSelectionAction.openUrl($0) }
         case .field(let vm) where collectionDisplayHelper?.twitterUsernameViewModel == vm:
             return collectionDisplayHelper?.twitterUsernameViewModel?.value

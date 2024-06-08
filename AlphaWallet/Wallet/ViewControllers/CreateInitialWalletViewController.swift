@@ -41,6 +41,7 @@ class CreateInitialWalletViewController: UIViewController {
 
         NSLayoutConstraint.activate([
             imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            imageView.heightAnchor.constraint(equalToConstant: 150),
             imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -20),
 
             titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20),

@@ -34,6 +34,7 @@ final class TokensViewController: UIViewController {
         let view = EmptyTableView(title: "", image: R.image.activities_empty_list()!, heightAdjustment: 0)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.isHidden = true
+        view.heightAnchor.constraint(equalToConstant: 200).isActive = true
         return view
     }()
     private lazy var emptyTableViewHeightConstraint: NSLayoutConstraint = {

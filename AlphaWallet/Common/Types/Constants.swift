@@ -8,6 +8,8 @@
 import Foundation
 import AlphaWalletFoundation
 
+// com.stormbird.alphawallet
+
 extension Constants {
     //Misc
     static let etherReceivedNotificationIdentifier = "etherReceivedNotificationIdentifier"
@@ -28,13 +30,13 @@ extension Constants {
     static let launchShortcutKey = "com.stormbird.alphawallet.qrScanner"
 
     // social
-    static let website = "https://alphawallet.com/"
-    static let twitterUsername = "AlphaWallet"
+    static let website = "https://mochain.app/"
+    static let twitterUsername = "0xmochain"
     static let redditGroupName = "r/AlphaWallet/"
     static let facebookUsername = "AlphaWallet"
 
     // support
-    static let supportEmail = "feedback+ios@alphawallet.com"
+    static let supportEmail = "support@mochain.app"
 
     static let dappsBrowserURL = URL(string: "http://aw.app")!
 }

@@ -62,6 +62,11 @@ class EmptyView: UIView {
         }
         return build()
     }
+    
+    func configure(contentMode: UIView.ContentMode) -> Self {
+        self.imageView?.contentMode = contentMode
+        return build()
+    }
 
     func configure(buttonTitle title: String?, width: CGFloat = 180, size: ButtonSize = .large, style: ButtonStyle = .green, buttonSelectionClosure: (() -> Void)?) -> Self {
         self.buttonSelectionClosure = buttonSelectionClosure
@@ -193,6 +198,7 @@ extension EmptyView {
     static func activitiesEmptyView() -> EmptyView {
         EmptyView()
             .configure(image: R.image.activities_empty_list())
+            .configure(contentMode: .scaleAspectFit)
             .configure(title: R.string.localizable.activityEmpty())
             .configure(spacing: 30)
             .configure(insets: .zero)

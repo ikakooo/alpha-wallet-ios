@@ -6,6 +6,7 @@ import Foundation
 public enum URLServiceProvider {
     case discord
     case twitter
+    case telegram
     case reddit
     case facebook
     case faq
@@ -14,6 +15,9 @@ public enum URLServiceProvider {
     // TODO should probably change or remove `localURL` since iOS supports deep links now
     public var deepLinkURL: URL? {
         switch self {
+        case .telegram:
+//            return URL(string: "tg://resolve?domain=mochain_official")
+            return URL(string: "https://t.me/mochain_official")
         case .discord:
             return URL(string: "https://discord.gg/nbb9VSF85A")
         case .twitter:
@@ -29,6 +33,8 @@ public enum URLServiceProvider {
 
     public var remoteURL: URL {
         switch self {
+        case .telegram:
+            return URL(string: "https://t.me/mochain_official")!
         case .discord:
             return URL(string: "https://discord.gg/nbb9VSF85A")!
         case .twitter:
@@ -38,7 +44,7 @@ public enum URLServiceProvider {
         case .facebook:
             return URL(string: "https://www.facebook.com/\(Constants.facebookUsername)")!
         case .faq:
-            return URL(string: "https://alphawallet.com/faq/")!
+            return URL(string: "https://mochain.app/")!
         case .github:
             return URL(string: "https://github.com/AlphaWallet/alpha-wallet-ios/issues/new")!
         }
