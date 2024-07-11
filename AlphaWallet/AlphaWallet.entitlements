@@ -28,7 +28,7 @@
 	<string>NSFileProtectionComplete</string>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.ikak.ooo</string>
+		<string>group.app.moscan.walletapp</string>
 	</array>
 </dict>
 </plist>
